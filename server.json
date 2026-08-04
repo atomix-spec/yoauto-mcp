@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.atomix-spec/yoauto-mcp",
+  "title": "YoAuto MCP",
+  "description": "Official YoAuto B2A MCP Gateway for vehicle search, listing details, dealer context, VIN-history availability, and marketplace workflows in Moldova.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/atomix-spec/yoauto-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://yoauto.md/api/mcp/sse"
+    }
+  ]
+}
