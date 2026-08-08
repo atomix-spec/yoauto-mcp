@@ -8,6 +8,16 @@ https://yoauto.md/api/mcp/sse
 
 The OpenAI plugin submission is useful for ChatGPT, but agents discover MCP servers through registries. This public meta-repository exists only for discovery metadata. The private YoAuto backend stays in the private `automarket` repository.
 
+## Current Public Listings
+
+| Registry | Status | Public link |
+| --- | --- | --- |
+| Official MCP Registry | Active as `io.github.atomix-spec/yoauto-mcp` | https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.atomix-spec/yoauto-mcp |
+| Smithery.ai | Published as `atomix-spec/yoauto-mcp` | https://smithery.ai/servers/atomix-spec/yoauto-mcp |
+| Glama.ai | Published as `atomix-spec/yoauto-mcp` | https://glama.ai/mcp/servers/atomix-spec/yoauto-mcp |
+
+Do not add OpenAI draft/edit URLs, API keys, verification tokens, `.env` values, customer data, backend logs, or private repository links to this public repository.
+
 ## Official MCP Registry
 
 Metadata lives in the repository root:
