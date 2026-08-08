@@ -20,6 +20,7 @@ Do not add OpenAI draft/edit URLs, API keys, verification tokens, `.env` values,
 
 ## Official Documentation
 
+- YoAuto MCP documentation: https://yoauto.md/api-mcp
 - YoAuto MCP documentation: https://yoauto.md/ru/api-mcp
 - Production MCP SSE endpoint: https://yoauto.md/api/mcp/sse
 
