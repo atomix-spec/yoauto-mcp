@@ -18,6 +18,11 @@ The OpenAI plugin submission is useful for ChatGPT, but agents discover MCP serv
 
 Do not add OpenAI draft/edit URLs, API keys, verification tokens, `.env` values, customer data, backend logs, or private repository links to this public repository.
 
+## Official Documentation
+
+- YoAuto MCP documentation: https://yoauto.md/ru/api-mcp
+- Production MCP SSE endpoint: https://yoauto.md/api/mcp/sse
+
 ## Official MCP Registry
 
 Metadata lives in the repository root:

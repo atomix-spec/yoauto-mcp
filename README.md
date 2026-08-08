@@ -25,6 +25,7 @@ io.github.atomix-spec/yoauto-mcp
 ## Public Links
 
 - GitHub: https://github.com/atomix-spec/yoauto-mcp
+- YoAuto MCP docs: https://yoauto.md/ru/api-mcp
 - MCP SSE endpoint: https://yoauto.md/api/mcp/sse
 - Official MCP Registry name: `io.github.atomix-spec/yoauto-mcp`
 - Smithery: https://smithery.ai/servers/atomix-spec/yoauto-mcp
