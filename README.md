@@ -8,7 +8,7 @@ This repository intentionally contains no backend source code. It exists so MCP 
 
 YoAuto MCP is a production remote FastMCP server for AI-agent vehicle marketplace workflows in Moldova. The server is live on the YoAuto domain, published through the main MCP discovery channels, and documented for agent builders.
 
-- 10 production FastMCP tools.
+- Production FastMCP tools for vehicle discovery and marketplace workflows.
 - Remote SSE transport hosted at `yoauto.md`.
 - JSON Schema documentation for tool inputs.
 - Query auth fallback for MCP clients that cannot set custom headers.
@@ -45,20 +45,18 @@ io.github.atomix-spec/yoauto-mcp
 
 ## Production FastMCP Tools
 
-YoAuto MCP exposes 10 tools for vehicle marketplace workflows:
+YoAuto MCP exposes tools for vehicle marketplace workflows:
 
 - Search YoAuto car and vehicle listings.
 - Retrieve listing details.
 - Review dealer marketplace context.
 - Check VIN-history availability.
-- Read account credit or energy balance where authorized.
 - Save vehicles to an agent's favorites list with notes.
 - Retrieve a dealer's current vehicle catalog.
 - Request a callback or vehicle inspection appointment.
 - Send internal marketplace messages when explicitly requested by the user.
-- Start allowed YoAuto energy top-up flows when explicitly requested by the user.
 
-The public documentation page includes per-tool JSON Schemas, accepted enum values, default parameters, authentication options, Energy-cost notes, and JSON-RPC 2.0 error examples.
+The public documentation page includes per-tool JSON Schemas, accepted enum values, default parameters, authentication options, and JSON-RPC 2.0 error examples.
 
 ## Architecture
 
@@ -90,7 +88,7 @@ For MCP clients that support remote SSE servers:
 ## Safety Notes
 
 - Search and lookup tools are read-only.
-- Messaging and energy top-up tools are not read-only and should be called only after explicit user intent.
+- Messaging, favorites, callback, and appointment tools are not read-only and should be called only after explicit user intent.
 - The MCP server is hosted at `yoauto.md`; this repository only publishes discovery metadata.
 - Do not place production tokens, private backend source, database credentials, customer records, or server logs in this repository.
 
