@@ -11,7 +11,7 @@
   "remotes": [
     {
       "type": "sse",
-      "url": "https://yoauto.md/api/mcp/sse"
+      "url": "https://yoauto.md/api/mcp/openai/sse"
     }
   ]
 }

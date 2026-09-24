@@ -9,7 +9,7 @@ This repository intentionally contains no backend source code. It exists so MCP 
 YoAuto MCP is a production remote FastMCP server for AI-agent vehicle marketplace workflows in Moldova. The server is live on the YoAuto domain, published through the main MCP discovery channels, and documented for agent builders.
 
 - Production FastMCP tools for vehicle discovery and marketplace workflows.
-- Remote SSE transport hosted at `yoauto.md`.
+- Public-safe remote SSE transport hosted at `yoauto.md`.
 - JSON Schema documentation for tool inputs.
 - Query auth fallback for MCP clients that cannot set custom headers.
 - JSON-RPC 2.0 error payloads for agent-readable failures.
@@ -18,7 +18,7 @@ YoAuto MCP is a production remote FastMCP server for AI-agent vehicle marketplac
 ## MCP Endpoint
 
 ```text
-https://yoauto.md/api/mcp/sse
+https://yoauto.md/api/mcp/openai/sse
 ```
 
 Transport:
@@ -38,23 +38,20 @@ io.github.atomix-spec/yoauto-mcp
 - GitHub: https://github.com/atomix-spec/yoauto-mcp
 - YoAuto MCP docs: https://yoauto.md/api-mcp
 - YoAuto MCP docs: https://yoauto.md/ru/api-mcp
-- MCP SSE endpoint: https://yoauto.md/api/mcp/sse
+- MCP SSE endpoint: https://yoauto.md/api/mcp/openai/sse
 - Official MCP Registry name: `io.github.atomix-spec/yoauto-mcp`
 - Smithery: https://smithery.ai/servers/atomix-spec/yoauto-mcp
 - Glama: https://glama.ai/mcp/servers/atomix-spec/yoauto-mcp
 
 ## Production FastMCP Tools
 
-YoAuto MCP exposes tools for vehicle marketplace workflows:
+YoAuto MCP exposes public-safe tools for vehicle marketplace workflows:
 
 - Search YoAuto car and vehicle listings.
 - Retrieve listing details.
 - Review dealer marketplace context.
 - Check VIN-history availability.
-- Save vehicles to an agent's favorites list with notes.
-- Retrieve a dealer's current vehicle catalog.
-- Request a callback or vehicle inspection appointment.
-- Send internal marketplace messages when explicitly requested by the user.
+- Retrieve general YoAuto marketplace information.
 
 The public documentation page includes per-tool JSON Schemas, accepted enum values, default parameters, authentication options, and JSON-RPC 2.0 error examples.
 
@@ -63,7 +60,7 @@ The public documentation page includes per-tool JSON Schemas, accepted enum valu
 ```text
 Private YoAuto backend
   -> hosts production MCP endpoint
-  -> https://yoauto.md/api/mcp/sse
+  -> https://yoauto.md/api/mcp/openai/sse
 
 Public yoauto-mcp repository
   -> publishes server.json and documentation
@@ -79,7 +76,7 @@ For MCP clients that support remote SSE servers:
   "mcpServers": {
     "yoauto": {
       "type": "sse",
-      "url": "https://yoauto.md/api/mcp/sse"
+      "url": "https://yoauto.md/api/mcp/openai/sse"
     }
   }
 }
@@ -88,7 +85,7 @@ For MCP clients that support remote SSE servers:
 ## Safety Notes
 
 - Search and lookup tools are read-only.
-- Messaging, favorites, callback, and appointment tools are not read-only and should be called only after explicit user intent.
+- The public registry endpoint intentionally exposes only search and lookup workflows.
 - The MCP server is hosted at `yoauto.md`; this repository only publishes discovery metadata.
 - Do not place production tokens, private backend source, database credentials, customer records, or server logs in this repository.
 

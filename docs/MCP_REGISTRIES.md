@@ -3,7 +3,7 @@
 YoAuto exposes a remote MCP server at:
 
 ```text
-https://yoauto.md/api/mcp/sse
+https://yoauto.md/api/mcp/openai/sse
 ```
 
 The OpenAI plugin submission is useful for ChatGPT, but agents discover MCP servers through registries. This public meta-repository exists only for discovery metadata. The private YoAuto backend stays in the private `automarket` repository.
@@ -22,7 +22,7 @@ Do not add OpenAI draft/edit URLs, API keys, verification tokens, `.env` values,
 
 - YoAuto MCP documentation: https://yoauto.md/api-mcp
 - YoAuto MCP documentation: https://yoauto.md/ru/api-mcp
-- Production MCP SSE endpoint: https://yoauto.md/api/mcp/sse
+- Production public-safe MCP SSE endpoint: https://yoauto.md/api/mcp/openai/sse
 
 ## Official MCP Registry
 
@@ -62,7 +62,7 @@ YoAuto is already hosted, so publish it as a URL-based remote server:
 ```bash
 npm install -g smithery@latest
 smithery auth login
-smithery mcp publish "https://yoauto.md/api/mcp/sse" -n "atomix-spec/yoauto-mcp"
+smithery mcp publish "https://yoauto.md/api/mcp/openai/sse" -n "atomix-spec/yoauto-mcp"
 smithery mcp search "yoauto"
 ```
 
@@ -74,7 +74,7 @@ Glama indexes open-source MCP repositories and also surfaces official registry e
 
 ```text
 Repository: https://github.com/atomix-spec/yoauto-mcp
-MCP endpoint: https://yoauto.md/api/mcp/sse
+MCP endpoint: https://yoauto.md/api/mcp/openai/sse
 Transport: SSE
 Name: YoAuto MCP
 ```
@@ -93,7 +93,7 @@ Before publishing or after each deploy:
 
 ```bash
 curl -i https://yoauto.md/.well-known/openai-apps-challenge
-curl -i https://yoauto.md/api/mcp/sse
+curl -i https://yoauto.md/api/mcp/openai/sse
 ```
 
 The MCP endpoint must not return a Cloudflare 5xx response. For SSE, keep proxy buffering disabled and ensure the upstream FastMCP process stays open long enough for registry scanners to inspect it.
